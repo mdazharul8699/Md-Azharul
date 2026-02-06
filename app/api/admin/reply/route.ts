@@ -50,7 +50,8 @@ export async function POST(req: Request) {
     console.error("Reply API Error:", error);
     
     // ৫. এরর হলে সেটিও লগে সেভ করা
-    await createLog("REPLY_FAILED", "System", `Failed to send email to ${email}: ${error.message}`, "FAILED");
+    
+
     
     return NextResponse.json({ success: false, error: error.message }, { status: 500 });
   }
