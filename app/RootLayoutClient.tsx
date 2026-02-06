@@ -1,11 +1,11 @@
 "use client";
-import "./globals.css";
-import { ThemeProvider, useTheme } from "../context/ThemeContext";
+import { motion, useScroll, useSpring, useTransform } from "framer-motion";
+import { SessionProvider } from "next-auth/react";
 import CustomCursor from "../components/CustomCursor";
 import Header from "../components/Header";
 import SpiderBackground from "../components/SpiderBackground";
-import { motion, useScroll, useSpring, useTransform } from "framer-motion";
-import { SessionProvider } from "next-auth/react";
+import { ThemeProvider, useTheme } from "../context/ThemeContext";
+import "./globals.css";
 
 function ScrollProgressBorders() {
   const theme = useTheme();
@@ -85,6 +85,7 @@ function ScrollProgressBorders() {
 export default function RootLayoutClient({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="scroll-smooth">
+      
       <body className="bg-[#050505] text-white overflow-x-hidden antialiased">
         <SessionProvider>
         <ThemeProvider>
