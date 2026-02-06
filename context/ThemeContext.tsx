@@ -3,24 +3,32 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 
 const themes = [
- 
- { 
+  { 
     name: 'purple', 
     color: '#A855F7', 
     glow: 'shadow-[0_0_20px_rgba(168,85,247,0.5)]' 
-  } ,
+  },
   { 
     name: 'yellow', 
     color: '#FACC15', 
     glow: 'shadow-[0_0_20px_rgba(250,204,21,0.5)]' 
+  },
+  { 
+    name: 'lime', 
+    color: '#84CC16', 
+    glow: 'shadow-[0_0_20_rgba(132,204,22,0.5)]' 
+  },
+  { 
+    name: 'cyan', 
+    color: '#06B6D4', 
+    glow: 'shadow-[0_0_20px_rgba(6,182,212,0.5)]' 
   }
+];
   // { 
   //   name: 'pink', 
   //   color: '#FF007F', // Premium Neon Pink
   //   glow: 'shadow-[0_0_20px_rgba(255,0,127,0.5)]' 
   // },
-  
-];
 
 const ThemeContext = createContext(themes[0]);
 
